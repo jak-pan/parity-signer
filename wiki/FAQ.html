@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Security-And-Privacy - Parity-Signer</title>
+        <title>FAQ - Parity-Signer</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Parity-Signer</a></li><li class="chapter-item expanded "><a href="../wiki/FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../wiki/Building-And-Publishing.html"><strong aria-hidden="true">3.</strong> Building-And-Publishing</a></li><li class="chapter-item expanded "><a href="../wiki/Changelog.html"><strong aria-hidden="true">4.</strong> Changelog</a></li><li class="chapter-item expanded "><a href="../wiki/Development.html"><strong aria-hidden="true">5.</strong> Development</a></li><li class="chapter-item expanded "><a href="../wiki/QA.html"><strong aria-hidden="true">6.</strong> QA</a></li><li class="chapter-item expanded "><a href="../wiki/Security-And-Privacy.html" class="active"><strong aria-hidden="true">7.</strong> Security-And-Privacy</a></li><li class="chapter-item expanded "><a href="../wiki/Test.html"><strong aria-hidden="true">8.</strong> Test</a></li><li class="chapter-item expanded "><a href="../wiki/Troubleshooting.html"><strong aria-hidden="true">9.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../wiki/Upgrading.html"><strong aria-hidden="true">10.</strong> Upgrading</a></li><li class="chapter-item expanded "><a href="../tutorials/Hierarchical-Deterministic-Key-Derivation.html"><strong aria-hidden="true">11.</strong> Hierarchical-Deterministic-Key-Derivation</a></li><li class="chapter-item expanded "><a href="../tutorials/Kusama-tutorial.html"><strong aria-hidden="true">12.</strong> Kusama-tutorial</a></li><li class="chapter-item expanded "><a href="../tutorials/New-Network.html"><strong aria-hidden="true">13.</strong> New-Network</a></li><li class="chapter-item expanded "><a href="../tutorials/Recover-Account-Polkadotjs.html"><strong aria-hidden="true">14.</strong> Recover-Account-Polkadotjs</a></li><li class="chapter-item expanded "><a href="../tutorials/Start.html"><strong aria-hidden="true">15.</strong> Start</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Parity-Signer</a></li><li class="chapter-item expanded "><a href="../wiki/FAQ.html" class="active"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../wiki/Building-And-Publishing.html"><strong aria-hidden="true">3.</strong> Building-And-Publishing</a></li><li class="chapter-item expanded "><a href="../wiki/Changelog.html"><strong aria-hidden="true">4.</strong> Changelog</a></li><li class="chapter-item expanded "><a href="../wiki/Development.html"><strong aria-hidden="true">5.</strong> Development</a></li><li class="chapter-item expanded "><a href="../wiki/QA.html"><strong aria-hidden="true">6.</strong> QA</a></li><li class="chapter-item expanded "><a href="../wiki/Security-And-Privacy.html"><strong aria-hidden="true">7.</strong> Security-And-Privacy</a></li><li class="chapter-item expanded "><a href="../wiki/Test.html"><strong aria-hidden="true">8.</strong> Test</a></li><li class="chapter-item expanded "><a href="../wiki/Troubleshooting.html"><strong aria-hidden="true">9.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../wiki/Upgrading.html"><strong aria-hidden="true">10.</strong> Upgrading</a></li><li class="chapter-item expanded "><a href="../tutorials/Hierarchical-Deterministic-Key-Derivation.html"><strong aria-hidden="true">11.</strong> Hierarchical-Deterministic-Key-Derivation</a></li><li class="chapter-item expanded "><a href="../tutorials/Kusama-tutorial.html"><strong aria-hidden="true">12.</strong> Kusama-tutorial</a></li><li class="chapter-item expanded "><a href="../tutorials/New-Network.html"><strong aria-hidden="true">13.</strong> New-Network</a></li><li class="chapter-item expanded "><a href="../tutorials/Recover-Account-Polkadotjs.html"><strong aria-hidden="true">14.</strong> Recover-Account-Polkadotjs</a></li><li class="chapter-item expanded "><a href="../tutorials/Start.html"><strong aria-hidden="true">15.</strong> Start</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -136,61 +136,68 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="security-and-privacy"><a class="header" href="#security-and-privacy">Security and Privacy</a></h1>
-<h2 id="device-security"><a class="header" href="#device-security">Device security</a></h2>
-<p>Parity Signer is built to be used offline. The mobile device used to run the app will hold important information that needs to be kept securely stored. It is therefore advised to:</p>
+                        <h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
 <ul>
-<li>Get a separate mobile device.</li>
-<li>Make a factory reset.</li>
-<li>Enable full-disk encryption on the device, with a reasonable password (might not be on by default, for example for older Android devices).</li>
-<li>Do not use any kind of biometrics such as fingerprint or face recognition for device decryption/unlocking, as those may be less secure than regular passwords.</li>
-<li>Once the app has been installed, enable airplane mode and make sure to switch off Wifi, Bluetooth or any connection ability of the device.</li>
-<li>Only charge the phone on a power outlet that is never connected to the internet. Only charge the phone with the manufacturer's charging adapter. Do not charge the phone on public USB chargers.</li>
+<li>
+<p><strong>What is Signer?</strong></p>
+<p>Signer is an app for an air-gapped device, it turns an offline device — usually a smartphone — into a secure hardware wallet. Signer offers you a way to securely generate, store, manage and use your blockchain credentials. </p>
+</li>
+<li>
+<p><strong>How does an offline device communicate with the outside world?</strong></p>
+<p>Communication happens through scanning and generating QR codes. Scanned with Signer input-QRs interact with keys stored in Signer to, generate response-QRs on behalf of those keys. Usually input-QR is a blockchain transaction, and a response-QR is a signature for this transaction. There are tried and true cryptographic algorithms that power these QR codes, as well as some smart engineering that make your dedicated device safe to use.</p>
+</li>
+<li>
+<p><strong>Should I use Signer?</strong></p>
+<p>Signer is optimised for the highest security requirements. If you already manage many accounts on multiple networks, Signer is great for you. If you have little experience with blockchain networks but still want good security affordances, you might find the learning curve steep. We strive to make Signer as intuitive as possible; get in touch via <a href="mailto:signer@parity.io">signer@parity.io</a> or <a href="https://github.com/paritytech/parity-signer/issues">GitHub Issues</a> if you can help us get there!</p>
+</li>
+<li>
+<p><strong>What networks does Signer support?</strong></p>
+<p>From-the-shelf Party Signer supports Polkadot, Kusama and Westend networks. But it's not limited to these networks. More experienced users can generate metadata to expand network capability of Parity Signer. </p>
+</li>
+<li>
+<p><strong>I want to play with Signer to get a better feeling of how it works. Is there a way to do it without spending valuable tokens?</strong></p>
+<p>Yes. In Signer, you should add a key for an address on Westend network and request test tokens for that address, see step-by-step guide on <a href="https://wiki.polkadot.network/docs/learn-DOT#getting-westies">Polkadot Network Wiki</a>. </p>
+<p>You can use test tokens in the same way you would use value-bearing tokens.</p>
+<p>For example with <a href="https://polkadot.js.org/apps/">PolkadotJS Apps</a> you can create a transaction on behalf of your account, generate a signature with Signer and submit it to the network. All of this without keys ever leaving your offline device.</p>
+</li>
+<li>
+<p><strong>How do I keep my keys secure?</strong></p>
+<p>Signer is a safe way to use your keys. However, that alone won't be enough to keep your keys secure. Devices break and get lost. This is why we always recommend to backup your seed phrases and derivation paths on paper. We are such big fans of paper backups that we even support a special tool to power your paper backup game by splitting your backups into shards called <a href="https://bs.parity.io/">Banana Split</a>.</p>
+</li>
+<li>
+<p><strong>How do I know I am not interacting with malicious apps or actors?</strong></p>
+<p>Signer is does not interact with network. The app itself does not have a way to check if an app or an account you interacting with is malicious. 
+If you use Signer with PolkadotJS Browser Extension, PolkadotJS Apps or Signer Component Browser Extension they will rely on community driven curated list of potentially less-than-honest operators: <a href="https://polkadot.js.org/phishing/#">https://polkadot.js.org/phishing/#</a> to prevent you from interacting with certain sites and addresses. However, there are no limitations on use of Signer with other tools.</p>
+</li>
+<li>
+<p><strong>What is a difference between seed key and derived key? Why should I use derived keys?</strong></p>
+<p>A seed key is a single key pair generated from a seed phrase. You can “grow” as many derived keys from a single seed by adding derivation paths to your seed phrase.</p>
+<p>Learn more about types of derivation paths on <a href="https://docs.substrate.io/v3/tools/subkey/#hd-key-derivation">substrate.io</a>.</p>
+<p>Derivation path is a sensitive information, but knowing the derivation path is not enough to recover a key. Derived keys cannot be backed up without both of the ingredients: seed phrase (can be shared between multiple keys) and a derivation path (unique for each of the keys “grown” from that seed).</p>
+<p>The main reason to use derived keys is how easy it is to backup (and restore from a backup) a derivation path compared to seed phrase.</p>
+</li>
+<li>
+<p><strong>What is an identicon, the image next to my keys?</strong></p>
+<p>An identicon is a visual hash of a public key — a unique picture generated from your public key. The same public key should have the same identicon regardless of the application. It is a good tool to distinguish quickly between keys. However, when interacting with keys, i.g. verifying a recipient of a transaction, do not rely only on identicons, it is better to check the full public address.</p>
+</li>
+<li>
+<p><strong>Signer does not decode transactions when I scan them. What happened? How can I fix it?</strong></p>
+<p>Most likely network you are interacting with was updated and Signer is missing data to decode the transaction. You should update network’s metadata by scanning a QR code containing recent metadata – the same way you scan a transaction QR code – on <a href="https://metadata.parity.io/">Metadata Update Portal</a>.</p>
+</li>
+<li>
+<p><strong>How can I rename one of my seeds?</strong></p>
+<p>Due to security considerations, you cannot rename a seed. Please backup the seed and derived keys, remove it and add the seed again with a new name instead.</p>
+</li>
 </ul>
-<h2 id="how-to-get-it-and-use-it"><a class="header" href="#how-to-get-it-and-use-it">How to get it and use it?</a></h2>
-<h3 id="install-the-app"><a class="header" href="#install-the-app">Install the app</a></h3>
-<p>The app is available in beta for Android and iOs :</p>
-<ul>
-<li><a href="https://play.google.com/store/apps/details?id=io.parity.signer">Android Play store</a></li>
-<li><a href="https://itunes.apple.com/us/app/parity-signer/id1218174838">iOs app store</a></li>
-<li><a href="https://github.com/paritytech/parity-signer/releases">Signed APK from GitHub</a></li>
-</ul>
-<p>Please double check carefully the origin of the app, and make sure that the company distributing it is <strong>Parity Technologies</strong>. Usual security advice apply to this air-gapped wallet: </p>
-<ul>
-<li>When creating an account using Parity Signer Mobile app, make sure to write down the recovery phrase and store it in safe places.</li>
-<li>Always double check the information of the transactions you are about to sign or send.</li>
-<li>Make sure to first transfer a small amount of Ether with the app and verify that everything is working as expected before transferring larger amounts of Ether.</li>
-</ul>
-<h2 id="how-to-update-parity-signer-securely"><a class="header" href="#how-to-update-parity-signer-securely">How to update Parity Signer securely</a></h2>
-<p>Once Parity Signer is installed, your device should never go online. This would put your private keys at threat. To update, you will need to :</p>
-<ol>
-<li>Make sure you possess the recovery phrase for each of your accounts. You can find it on Parity Signer by :</li>
-</ol>
-<ul>
-<li>v4.0 choosing an identity &gt; click the user icon at the top right &gt; “Show Recovery Phrase”</li>
-<li>v2.2 tapping an account &gt; 3 dots menu at the top right &gt; “Backup Recovery Phrase”</li>
-<li>v2.0 tapping an account &gt; tap on the account address &gt;   “Backup Recovery Phrase”</li>
-</ul>
-<ol start="2">
-<li>Factory reset the device.</li>
-<li>Enable full-disk encryption on the device and set a strong password (might not be on by default, for example for older Android devices).</li>
-<li>Do not use any kind of biometrics such as fingerprint or face recognition for device decryption/unlocking, as those may be less secure than regular passwords.</li>
-<li>Install Parity Signer from the Apple store or Android store or download the apk from Parity Signer’s Github repository (make sure you are on the right website and verify the checksum)</li>
-<li>Once the app has been installed, enable airplane mode and make sure to switch off Wifi, Bluetooth, and any other connection ability the device has.</li>
-<li>Only charge the phone on a power outlet that is never connected to the internet. Only charge the phone with the manufacturer’s charging adapter. Do not charge the phone on public USB chargers.</li>
-<li>Recover your accounts.</li>
-</ol>
-<h2 id="what-data-does-it-collect"><a class="header" href="#what-data-does-it-collect">What data does it collect?</a></h2>
-<p>None, it's as simple as that. The Parity Signer Mobile Android and iOS apps do not send any sort of data to Parity Technologies or any partner and work completely offline once installed.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../wiki/QA.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../wiki/Test.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../wiki/Building-And-Publishing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -199,10 +206,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../wiki/QA.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../wiki/Test.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../wiki/Building-And-Publishing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
