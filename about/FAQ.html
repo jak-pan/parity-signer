@@ -77,7 +77,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> Parity-Signer</a></li><li class="chapter-item expanded "><a href="../wiki/FAQ.html" class="active"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../wiki/Building-And-Publishing.html"><strong aria-hidden="true">3.</strong> Building-And-Publishing</a></li><li class="chapter-item expanded "><a href="../wiki/Changelog.html"><strong aria-hidden="true">4.</strong> Changelog</a></li><li class="chapter-item expanded "><a href="../wiki/Development.html"><strong aria-hidden="true">5.</strong> Development</a></li><li class="chapter-item expanded "><a href="../wiki/QA.html"><strong aria-hidden="true">6.</strong> QA</a></li><li class="chapter-item expanded "><a href="../wiki/Security-And-Privacy.html"><strong aria-hidden="true">7.</strong> Security-And-Privacy</a></li><li class="chapter-item expanded "><a href="../wiki/Test.html"><strong aria-hidden="true">8.</strong> Test</a></li><li class="chapter-item expanded "><a href="../wiki/Troubleshooting.html"><strong aria-hidden="true">9.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../wiki/Upgrading.html"><strong aria-hidden="true">10.</strong> Upgrading</a></li><li class="chapter-item expanded "><a href="../tutorials/Hierarchical-Deterministic-Key-Derivation.html"><strong aria-hidden="true">11.</strong> Hierarchical-Deterministic-Key-Derivation</a></li><li class="chapter-item expanded "><a href="../tutorials/Kusama-tutorial.html"><strong aria-hidden="true">12.</strong> Kusama-tutorial</a></li><li class="chapter-item expanded "><a href="../tutorials/New-Network.html"><strong aria-hidden="true">13.</strong> New-Network</a></li><li class="chapter-item expanded "><a href="../tutorials/Recover-Account-Polkadotjs.html"><strong aria-hidden="true">14.</strong> Recover-Account-Polkadotjs</a></li><li class="chapter-item expanded "><a href="../tutorials/Start.html"><strong aria-hidden="true">15.</strong> Start</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../index.html"><strong aria-hidden="true">1.</strong> About Parity Signer</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../about/FAQ.html" class="active"><strong aria-hidden="true">1.1.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../about/Security-And-Privacy.html"><strong aria-hidden="true">1.2.</strong> Security-And-Privacy</a></li><li class="chapter-item expanded "><a href="../tutorials/Hierarchical-Deterministic-Key-Derivation.html"><strong aria-hidden="true">1.3.</strong> Hierarchical-Deterministic-Key-Derivation</a></li><li class="chapter-item expanded "><a href="../about/Changelog.html"><strong aria-hidden="true">1.4.</strong> Changelog</a></li></ol></li><li class="chapter-item expanded "><a href="../tutorials/SUMMARY.html"><strong aria-hidden="true">2.</strong> User Guides</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../tutorials/Start.html"><strong aria-hidden="true">2.1.</strong> Start</a></li><li class="chapter-item expanded "><a href="../tutorials/Upgrading.html"><strong aria-hidden="true">2.2.</strong> Upgrading</a></li><li class="chapter-item expanded "><a href="../tutorials/New-Network.html"><strong aria-hidden="true">2.3.</strong> Add Network</a></li><li class="chapter-item expanded "><a href="../tutorials/Kusama-tutorial.html"><strong aria-hidden="true">2.4.</strong> Kusama-tutorial</a></li><li class="chapter-item expanded "><a href="../tutorials/Recover-Account-Polkadotjs.html"><strong aria-hidden="true">2.5.</strong> Recover-Account-Polkadotjs</a></li></ol></li><li class="chapter-item expanded "><a href="../development/Development.html"><strong aria-hidden="true">3.</strong> Development</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../development/Building-And-Publishing.html"><strong aria-hidden="true">3.1.</strong> Building-And-Publishing</a></li><li class="chapter-item expanded "><a href="../development/QA-Checking-List.html"><strong aria-hidden="true">3.2.</strong> QA Checking List</a></li><li class="chapter-item expanded "><a href="../development/Troubleshooting.html"><strong aria-hidden="true">3.3.</strong> Troubleshooting</a></li><li class="chapter-item expanded "><a href="../about/Changelog.html"><strong aria-hidden="true">3.4.</strong> Changelog</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -137,80 +137,48 @@
                 <div id="content" class="content">
                     <main>
                         <h2 id="faq"><a class="header" href="#faq">FAQ</a></h2>
-<ul>
-<li>
-<p><strong>What is Signer?</strong></p>
-<p>Signer is an app for an air-gapped device, it turns an offline device — usually a smartphone — into a secure hardware wallet. Signer offers you a way to securely generate, store, manage and use your blockchain credentials. </p>
-</li>
-<li>
-<p><strong>How does an offline device communicate with the outside world?</strong></p>
-<p>Communication happens through scanning and generating QR codes. Scanned with Signer input-QRs interact with keys stored in Signer to, generate response-QRs on behalf of those keys. Usually input-QR is a blockchain transaction, and a response-QR is a signature for this transaction. There are tried and true cryptographic algorithms that power these QR codes, as well as some smart engineering that make your dedicated device safe to use.</p>
-</li>
-<li>
-<p><strong>Should I use Signer?</strong></p>
+<h3 id="what-is-signer"><a class="header" href="#what-is-signer">What is Signer?</a></h3>
+<p>Signer is an app for an air-gapped device, it turns an offline device — usually a smartphone — into a secure hardware wallet. Signer offers you a way to securely generate, store, manage and use your blockchain credentials.</p>
+<h3 id="should-i-use-signer"><a class="header" href="#should-i-use-signer">Should I use Signer?</a></h3>
 <p>Signer is optimised for the highest security requirements. If you already manage many accounts on multiple networks, Signer is great for you. If you have little experience with blockchain networks but still want good security affordances, you might find the learning curve steep. We strive to make Signer as intuitive as possible; get in touch via <a href="mailto:signer@parity.io">signer@parity.io</a> or <a href="https://github.com/paritytech/parity-signer/issues">GitHub Issues</a> if you can help us get there!</p>
-</li>
-<li>
-<p><strong>What networks does Signer support?</strong></p>
-<p>From-the-shelf Party Signer supports Polkadot, Kusama and Westend networks. But it's not limited to these networks. More experienced users can generate metadata to expand network capability of Parity Signer. </p>
-</li>
-<li>
-<p><strong>I want to play with Signer to get a better feeling of how it works. Is there a way to do it without spending valuable tokens?</strong></p>
+<h3 id="how-does-an-offline-device-communicate-with-the-outside-world"><a class="header" href="#how-does-an-offline-device-communicate-with-the-outside-world">How does an offline device communicate with the outside world?</a></h3>
+<p>Communication happens through scanning and generating QR codes. Scanned with Signer input-QRs interact with keys stored in Signer to, generate response-QRs on behalf of those keys. Usually input-QR is a blockchain transaction, and a response-QR is a signature for this transaction. There are tried and true cryptographic algorithms that power these QR codes, as well as some smart engineering that make your dedicated device safe to use.</p>
+<h3 id="how-can-i-update-metadata-version-for-a-network"><a class="header" href="#how-can-i-update-metadata-version-for-a-network">How can I update metadata version for a network?</a></h3>
+<p>Please go to <a href="https://metadata.parity.io/">Metadata Update Portal</a> and select network you need to update. Scan multipart QR code the same way you scan a transaction QR code. </p>
+<p>Why do I need to update network versions at all?</p>
+<p>It's a safety feature. Substrate-based blockchain networks have capacity to be updated and otherwise changed; without recent metadata version of a network Signer won't be able to parse a transaction correctly, and you won't be able to read it and verify what you sign. Given that Signer is an app for an air-gapped device, you have to update the network version by using camera.</p>
+<h3 id="what-networks-does-signer-support"><a class="header" href="#what-networks-does-signer-support">What networks does Signer support?</a></h3>
+<p>From-the-shelf Party Signer supports Polkadot, Kusama and Westend networks. But it's not limited to these networks. More experienced users can generate metadata to expand network capability of Parity Signer.</p>
+<h3 id="i-want-to-play-with-signer-to-get-a-better-feeling-of-how-it-works-is-there-a-way-to-do-it-without-spending-valuable-tokens"><a class="header" href="#i-want-to-play-with-signer-to-get-a-better-feeling-of-how-it-works-is-there-a-way-to-do-it-without-spending-valuable-tokens">I want to play with Signer to get a better feeling of how it works. Is there a way to do it without spending valuable tokens?</a></h3>
 <p>Yes. In Signer, you should add a key for an address on Westend network and request test tokens for that address, see step-by-step guide on <a href="https://wiki.polkadot.network/docs/learn-DOT#getting-westies">Polkadot Network Wiki</a>. </p>
 <p>You can use test tokens in the same way you would use value-bearing tokens.</p>
 <p>For example with <a href="https://polkadot.js.org/apps/">PolkadotJS Apps</a> you can create a transaction on behalf of your account, generate a signature with Signer and submit it to the network. All of this without keys ever leaving your offline device.</p>
-</li>
-<li>
-<p><strong>How do I keep my keys secure?</strong></p>
+<h3 id="how-do-i-keep-my-keys-secure"><a class="header" href="#how-do-i-keep-my-keys-secure">How do I keep my keys secure?</a></h3>
 <p>Signer is a safe way to use your keys. However, that alone won't be enough to keep your keys secure. Devices break and get lost. This is why we always recommend to backup your seed phrases and derivation paths on paper. We are such big fans of paper backups that we even support a special tool to power your paper backup game by splitting your backups into shards called <a href="https://bs.parity.io/">Banana Split</a>.</p>
-</li>
-<li>
-<p><strong>How do I know I am not interacting with malicious apps or actors?</strong></p>
+<h3 id="how-do-i-know-i-am-not-interacting-with-malicious-apps-or-actors"><a class="header" href="#how-do-i-know-i-am-not-interacting-with-malicious-apps-or-actors">How do I know I am not interacting with malicious apps or actors?</a></h3>
 <p>Signer does not interact with network. The app itself does not have a way to check if an app or an account you interacting with is malicious. 
 If you use Signer with PolkadotJS Browser Extension, PolkadotJS Apps or Signer Component Browser Extension they will rely on community driven curated list of potentially less-than-honest operators: <a href="https://polkadot.js.org/phishing/#">https://polkadot.js.org/phishing/#</a> to prevent you from interacting with certain sites and addresses. However, there are no limitations on use of Signer with other tools.</p>
-</li>
-<li>
-<p><strong>Can import my account from polkadot{.js} apps or extension to Parity Signer?</strong></p>
+<h3 id="can-import-my-account-from-polkadotjs-apps-or-extension-to-parity-signer"><a class="header" href="#can-import-my-account-from-polkadotjs-apps-or-extension-to-parity-signer">Can import my account from polkadot{.js} apps or extension to Parity Signer?</a></h3>
 <p>Yes. Keys are compatible between polkadot{.js} and Parity Signer, except for the keys generated with Ledger (BIP39). To import seed keys into Parity Signer, you need to know:</p>
-</li>
-</ul>
 <ol>
-<li>
-<p>Seed phrase<br />
-<em>It should always be backed up in paper!</em></p>
-</li>
-<li>
-<p>Network you are adding address to and whether Parity Signer installed on your device has metadata for the respective network.<br />
-<em>If (2) is not one of the default built-in networks, you will need to add network yourself or find a distribution center for adding networks.</em></p>
-</li>
-<li>
-<p>Derivation path<br />
-<em>Only if you are importing a derived key, usually keys generated with polkadot{.js} are seed keys.</em></p>
+<li>Seed phrase<br />
+<em>It should always be backed up in paper!</em></li>
+<li>Network you are adding address to and whether Parity Signer installed on your device has metadata for the respective network.<br />
+<em>If (2) is not one of the default built-in networks, you will need to add network yourself or find a distribution center for adding networks.</em></li>
+<li>Derivation path<br />
+<em>Only if you are importing a derived key, usually keys generated with polkadot{.js} are seed keys.</em></li>
+</ol>
 <p>In Parity Signer go to Keys, then press &quot;Plus&quot; icon in the top right of the screen, select &quot;Recover seed&quot;, enter display name to identify your seed, press &quot;Next&quot;, enter the seed phrase. Done, you've got your seed key imported!<br />
 If you are importing a derived key select the seed from which your key is derived, select account's network, press &quot;Plus&quot; icon next to &quot;Derived keys&quot;, enter your derivation path.</p>
-</li>
-</ol>
-<ul>
-<li>
-<p><strong>What is a difference between seed key and derived key? Why should I use derived keys?</strong></p>
+<h3 id="what-is-a-difference-between-seed-key-and-derived-key-why-should-i-use-derived-keys"><a class="header" href="#what-is-a-difference-between-seed-key-and-derived-key-why-should-i-use-derived-keys">What is a difference between seed key and derived key? Why should I use derived keys?</a></h3>
 <p>A seed key is a single key pair generated from a seed phrase. You can “grow” as many derived keys from a single seed by adding derivation paths to your seed phrase.</p>
 <p>Learn more about types of derivation paths on <a href="https://docs.substrate.io/v3/tools/subkey/#hd-key-derivation">substrate.io</a>.</p>
 <p>Derivation path is a sensitive information, but knowing the derivation path is not enough to recover a key. Derived keys cannot be backed up without both of the ingredients: seed phrase (can be shared between multiple keys) and a derivation path (unique for each of the keys “grown” from that seed).</p>
 <p>The main reason to use derived keys is how easy it is to backup (and restore from a backup) a derivation path compared to seed phrase.</p>
-</li>
-<li>
-<p><strong>What is an identicon, the image next to my keys?</strong></p>
+<h3 id="what-is-an-identicon-the-image-next-to-my-keys"><a class="header" href="#what-is-an-identicon-the-image-next-to-my-keys">What is an identicon, the image next to my keys?</a></h3>
 <p>An identicon is a visual hash of a public key — a unique picture generated from your public key. The same public key should have the same identicon regardless of the application. It is a good tool to distinguish quickly between keys. However, when interacting with keys, i.g. verifying a recipient of a transaction, do not rely only on identicons, it is better to check the full public address.</p>
-</li>
-<li>
-<p><strong>Signer does not decode transactions when I scan them. What happened? How can I fix it?</strong></p>
-<p>Most likely network you are interacting with was updated and Signer is missing data to decode the transaction. You should update network’s metadata by scanning a QR code containing recent metadata – the same way you scan a transaction QR code – on <a href="https://metadata.parity.io/">Metadata Update Portal</a>.</p>
-</li>
-<li>
-<p><strong>How can I rename one of my seeds?</strong></p>
+<h3 id="how-can-i-rename-one-of-my-seeds"><a class="header" href="#how-can-i-rename-one-of-my-seeds">How can I rename one of my seeds?</a></h3>
 <p>Due to security considerations, you cannot rename a seed. Please backup the seed and derived keys, remove it and add the seed again with a new name instead.</p>
-</li>
-</ul>
 
                     </main>
 
@@ -219,7 +187,7 @@ If you are importing a derived key select the seed from which your key is derive
                             <a rel="prev" href="../index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../wiki/Building-And-Publishing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../about/Security-And-Privacy.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -231,7 +199,7 @@ If you are importing a derived key select the seed from which your key is derive
                     <a rel="prev" href="../index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../wiki/Building-And-Publishing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../about/Security-And-Privacy.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
